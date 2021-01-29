@@ -14,12 +14,16 @@
   <body>
 
 
-    <table align="center" border="2" width="1000">
+    <table align="center" border="2" width="1200">
         <tr>
-            <th style="text-align: center;background-color: black;padding: 10px">
+            <th style="text-align: center;background-color: black;padding: 10px;">
                 <img src="{% static 'images/rms_icon.png' %}" width="90" height="90">
             </th>
-            <th style="font-family: 'Agency FB';font-size: 55px;color: red;background-color: black;text-align: center;padding: 10px">
+            <th style="font-family: 'Agency FB';
+                       font-size: 55px;
+                       color: red;
+                       background-color: black;
+                       text-align: center;">
                 Resume Management System
             </th>
         </tr>
@@ -29,23 +33,46 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#" style="color: white">RMS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
 
-        <li class="nav-item">
+        <li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home Page"  >
           <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="#" >Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Login</a>
+        </li>
+
+    <div class="btn-group" style="padding-left: 10px">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
+            Profile
+        </button>
+        <ul class="dropdown-menu menu">
+        <li><a class="dropdown-item" href="#">View Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Update Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Delete Profile</a>
+
+
+
+
+  </ul>
+    </div>
+          
+        <li class="nav-item" style="padding-left: 10px">
+          <a class="nav-link active" aria-current="page" href="#">Logout</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">About us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contact us</a>
-        </li>
-
       </ul>
     </div>
   </div>
