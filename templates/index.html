@@ -14,7 +14,7 @@
   <body>
 
 
-    <table align="center" border="2" width="1200">
+    <table align="center" border="0" width="1200">
         <tr>
             <th style="text-align: center;background-color: black;padding: 10px;">
                 <img src="{% static 'images/rms_icon.png' %}" width="90" height="90">
@@ -33,7 +33,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: white">RMS</a>
+    <a class="navbar-brand" href="{% url 'main' %}" style="color: white">RMS</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,10 +41,10 @@
       <ul class="navbar-nav">
 
         <li class="nav-item " data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home Page"  >
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'main' %}">Home</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link active" aria-current="page" href="#" >Registration</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'registration' %}" >Registration</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Login</a>
@@ -81,10 +81,16 @@
 
         </th>
         </tr>
-        <tr><th>Content</th></tr>
+        <tr><th colspan="2" style="text-align: center">
+
+            {% block content %}
+
+            {% endblock %}
+
+        </th></tr>
         <tr>
             <th colspan="2" style="color: red;text-align: center;background-color: gold">
-                Copyright &copy RMS All Rights Reserved.
+                Copyright &copy RMS All Rights Reserved 2021.
             </th>
         </tr>
     </table>

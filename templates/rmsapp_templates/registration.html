@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% load static %}
+    <h1 style="font-family: 'Century Schoolbook'"><b>Register Here</b></h1>
+    <table align="center" border="0">
+        {% for x in form %}
+            <tr>
+                <th style="padding: 5px;font-family: 'Agency FB';color: maroon">
+                    {{ x.label }}
+                </th>
+
+                <th>
+                    {{ x }}
+                </th>
+            </tr>
+        {% endfor %}
+            <tr>
+                <th colspan="2" style="padding-top: 10px"> <button type="button" class="btn btn-dark">Save</button></th>
+            </tr>
+    </table>
+
+    <br>
+    <br>
+{% endblock %}
